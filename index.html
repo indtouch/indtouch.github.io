@@ -8,7 +8,11 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
+<<<<<<< HEAD
     <!--Include jQuery -->
+=======
+   <!--Include jQuery -->
+>>>>>>> origin/add-panel
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <!--Include the slidepanel plugin -->
     <script type="text/javascript" src="javascript/jquery.slidepanel.js"></script>
@@ -70,6 +74,11 @@
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
+
+<!-- The href attribute is used to load external HTML content into your panel -->
+<a href="external.html" data-slidepanel="panel">Show Panel</a>
+
+
 <p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
       </section>
     </div>
@@ -81,7 +90,14 @@
       </footer>
     </div>
 
-    
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-slidepanel]').slidepanel({
+            orientation: 'right',
+            mode: 'push'
+        });
+    });
+</script>
 
   </body>
 </html>
